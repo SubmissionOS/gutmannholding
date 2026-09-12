@@ -1,6 +1,6 @@
 # security.txt für gutmannholding.com (RFC 9116)
 
-Contact: TODO
+Contact: mailto:rafaelgutmann@gutmannholding.com
 Expires: 2027-09-12T00:00:00.000Z
 Preferred-Languages: de, en
 Canonical: https://gutmannholding.com/.well-known/security.txt

@@ -6,32 +6,36 @@
   <title>Seite nicht gefunden – Gutmann Holding Group</title>
   <meta name="description" content="Die angeforderte Seite wurde nicht gefunden.">
   <meta name="robots" content="noindex">
-  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#16324F">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-  <header class="site-header">
-    <div class="container">
-      <a class="wordmark" href="/" aria-label="Gutmann Holding Group – Startseite">GUTMANN HOLDING GROUP</a>
+  <div class="band" aria-hidden="true"></div>
+
+  <header class="container">
+    <div class="topbar">
+      <a class="topbar__brand" href="/">GUTMANN HOLDING GROUP</a>
+      <a class="topbar__link" href="/impressum">Impressum</a>
     </div>
   </header>
 
-  <main id="main" class="site-main">
-    <div class="container">
-      <article class="page">
-        <h1 class="page__title">Seite nicht gefunden</h1>
-        <p>Die angeforderte Seite existiert nicht oder wurde verschoben.</p>
-        <p><a href="/">Zur Startseite</a></p>
-      </article>
+  <main id="main" class="container">
+    <div class="title">
+      <h1>Seite nicht gefunden</h1>
+      <p class="title__text">Die angeforderte Seite existiert nicht oder wurde verschoben.</p>
+    </div>
+    <div class="prose">
+      <p><a href="/">Zur Startseite</a></p>
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
-      <nav class="footer-nav" aria-label="Rechtliches">
-        <ul>
+      <nav aria-label="Rechtliches">
+        <ul class="footer__nav">
           <li><a href="/impressum">Impressum</a></li>
           <li><a href="/datenschutz">Datenschutz</a></li>
         </ul>
