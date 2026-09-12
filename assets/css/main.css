@@ -295,13 +295,6 @@ img {
   margin-top: var(--s-16);
 }
 
-/* Prüfstellen in Rechtstexten: sichtbar, aber ohne Farbfläche */
-.todo {
-  background: transparent;
-  color: inherit;
-  border-bottom: 1px solid var(--blue-600);
-}
-
 /* --------------------------------------------------------------------------
    7. Footer
    -------------------------------------------------------------------------- */

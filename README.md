@@ -29,9 +29,9 @@ Hinweis: Lokal funktionieren die Links `/impressum` und `/datenschutz` ohne
 
 Vercel, statisch, ohne Framework-Preset. Security-Header und URL-Verhalten
 sind in `vercel.json` definiert. Die Content-Security-Policy ist
-`default-src 'none'` mit `script-src 'none'`; das JSON-LD-Markup auf der
-Startseite ist davon nicht betroffen, weil der Browser
-`type="application/ld+json"` nicht als Skript ausführt.
+`default-src 'none'` mit `script-src 'none'` und `connect-src 'self'`; das
+JSON-LD-Markup auf der Startseite ist davon nicht betroffen, weil der
+Browser `type="application/ld+json"` nicht als Skript ausführt.
 
 ## Gestaltung
 
@@ -50,11 +50,8 @@ keine Cookies. Das Favicon liegt lokal unter `assets/img/favicon.svg`.
 ## Offene Punkte
 
 - `DESIGN.md` im Projektwurzelverzeichnis ablegen (liegt noch nicht vor)
-- `impressum.html`: vier Abschnitte wortgleich aus dem GuddiWeb-Impressum
-  übernehmen; Abschnitt "Haftung für Links" nennt einen Link auf
-  bewerbung.gutmannholding.com, den die Startseite nicht mehr enthält
-- `datenschutz.html`: Prüfstellen (Vercel-Protokolle, Übermittlungsgrundlage,
-  Squarespace-Vertragspartei, Löschfrist, Postfachanbieter, Behördenanschrift);
-  Abschnitt "Externe Links" wie oben
+- `datenschutz.html`: zwei Platzhalter `[PRÜFEN: ...]` (Vertragspartei
+  Squarespace, Vertragspartei und Rechenzentrumsstandort des Postfachs).
+  Bis sie ausgefüllt sind: kein Vercel-Import, kein Deploy.
 - Open-Graph-Bild unter `assets/img/` ausstehend, og:image und twitter:image
   kommen erst mit dem Asset zurück

@@ -43,9 +43,11 @@ gilt DESIGN.md.**
    Fehlt ein Rechtstext (Impressum, Datenschutz, AGB o. ä.), enthält die
    betreffende Seite ausschliesslich den Text `TODO: Text ausstehend` und
    der Zustand wird im Output der Session gemeldet. Kein Lorem Ipsum, keine
-   Vorlagen, keine "typischen" Formulierungen. Vorhandene Prüfstellen
-   (`<mark class="todo">`) in Rechtstexten werden nur vom Betreiber
-   ausgefüllt, nie von Claude.
+   Vorlagen, keine "typischen" Formulierungen. Platzhalter der Form
+   `[PRÜFEN: ...]` in Rechtstexten werden nur vom Betreiber ausgefüllt,
+   nie von Claude, und in jedem Output als Blocker gemeldet.
+   Inhalte unbekannter Herkunft im Arbeitsbaum werden nicht übernommen,
+   sondern gemeldet.
 
 7. **Vor jedem Commit: keine Secrets, keine internen Dokumente.**
    Das Repository ist öffentlich. Keine API-Keys, keine Tokens, keine
@@ -100,7 +102,9 @@ gilt DESIGN.md.**
   `sitemap.xml` eintragen (nur wenn öffentlich), Canonical setzen.
 - Bei Änderungen an `vercel.json`-Headern: CSP bleibt mindestens so streng
   wie jetzt. `default-src 'none'` und `script-src 'none'` bleiben, nie
-  `'unsafe-inline'`. Eine Aufweichung nur nach ausdrücklicher Freigabe.
+  `'unsafe-inline'`. `connect-src 'self'` ist freigegeben (Lighthouse holt
+  robots.txt per fetch aus dem Seitenkontext). Jede weitere Aufweichung nur
+  nach ausdrücklicher Freigabe.
 - Umlaute werden als echte Zeichen geschrieben (UTF-8), nicht als
   HTML-Entities und nicht als ae/oe/ue.
 - Zeilenenden LF (siehe `.gitattributes`).
