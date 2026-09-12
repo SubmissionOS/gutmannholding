@@ -50,8 +50,5 @@ keine Cookies. Das Favicon liegt lokal unter `assets/img/favicon.svg`.
 ## Offene Punkte
 
 - `DESIGN.md` im Projektwurzelverzeichnis ablegen (liegt noch nicht vor)
-- `datenschutz.html`: zwei Platzhalter `[PRÜFEN: ...]` (Vertragspartei
-  Squarespace, Vertragspartei und Rechenzentrumsstandort des Postfachs).
-  Bis sie ausgefüllt sind: kein Vercel-Import, kein Deploy.
 - Open-Graph-Bild unter `assets/img/` ausstehend, og:image und twitter:image
   kommen erst mit dem Asset zurück
